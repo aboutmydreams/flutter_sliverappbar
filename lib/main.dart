@@ -26,17 +26,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     var _tabs = <String>[];
     _tabs = <String>[
-      "Tab 1",
-      "Tab 2",
-      "Tab 3",
+      "知识库",
+      "成员",
+      "讨论",
     ];
 
     return Scaffold(
-      body:
-
-          /// 加TabBar
-          DefaultTabController(
-        length: _tabs.length, // This is the number of tabs.
+      body: DefaultTabController(
+        length: _tabs.length,
         child: NestedScrollView(
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             // These are the slivers that show up in the "outer" scroll view.
@@ -121,56 +118,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
       ),
-
-      /// 不加TabBar
-
-//      new CustomScrollView(
-//        slivers: <Widget>[
-//          new SliverAppBar(
-//            leading: new IconButton(
-//              icon: Icon(Icons.arrow_back),
-//              onPressed: () {},
-//            ),
-//
-//            title: Text("标题"),
-//
-//            actions: <Widget>[
-//              new IconButton(
-//                icon: Icon(Icons.add),
-//                onPressed: () {
-//                  print("添加");
-//                },
-//              ),
-//              new IconButton(
-//                icon: Icon(Icons.more_horiz),
-//                onPressed: () {
-//                  print("更多");
-//                },
-//              ),
-//            ],
-//
-//            expandedHeight: 230.0,
-//            floating: false,
-//            pinned: true,
-//            snap: false,
-//            brightness: Brightness.dark,
-//
-//            flexibleSpace: new FlexibleSpaceBar(
-//              background: Image.asset("images/a.jpg", fit: BoxFit.fill),
-//            ),
-//
-//          ),
-//          new SliverFixedExtentList(
-//            itemExtent: 50.0,
-//            delegate: new SliverChildBuilderDelegate(
-//              (context, index) => new ListTile(
-//                    title: new Text("Item $index"),
-//                  ),
-//              childCount: 30,
-//            ),
-//          ),
-//        ],
-//      ),
     );
   }
 }
